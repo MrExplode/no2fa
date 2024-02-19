@@ -7,12 +7,16 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "prettier --check .",
+    "lint": "prettier --check . && eslint .",
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "@types/eslint": "^8.56.2",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
     "prettier": "3.2.5",
     "typescript": "^5.3.3",
+    "typescript-eslint": "^7.0.1",
     "vite": "^5.0.11",
     "vite-plugin-monkey": "^3.5.1"
   }
