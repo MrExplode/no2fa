@@ -3,6 +3,9 @@ import monkey from 'vite-plugin-monkey'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+    build: {
+        minify: 'esbuild'
+    },
     plugins: [
         monkey({
             entry: 'src/main.ts',
@@ -12,7 +15,7 @@ export default defineConfig({
                 author: 'SunStorm',
                 description: 'Bypass the Neptun 2fa',
                 // list borrowed from NPU
-                include: [
+                match: [
                     'https://*neptun*/*hallgato*/*',
                     'https://*neptun*/*Hallgatoi*/*',
                     'https://*neptun*/*oktato*/*',
