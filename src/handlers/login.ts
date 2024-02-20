@@ -1,3 +1,4 @@
+import $ from 'jquery'
 import { GM_getValue } from '$'
 import { TOTP } from 'totp-generator'
 import { observe } from '../observer'

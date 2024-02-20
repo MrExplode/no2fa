@@ -17,3 +17,11 @@ export function writeToken(token: string) {
     input.val(token)
     $('button[sdaValidateToken=submit]')[0].click()
 }
+
+/**
+ * @returns true when the current page is the 2fa settings
+ */
+export function is2faPage(): boolean {
+    const tab = $('#c_options_ctl02_tab')
+    return tab.length != 0 && tab.hasClass('ajax__tab_active')
+}
