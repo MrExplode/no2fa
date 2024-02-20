@@ -1,4 +1,5 @@
-export interface Handler {
-    shouldLoad(): boolean
-    load(): void
+export abstract class Handler {
+    abstract shouldActivate(): boolean
+    abstract load(): void
+    unload(): void {}
 }
