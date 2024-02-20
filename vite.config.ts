@@ -11,9 +11,13 @@ export default defineConfig({
             entry: 'src/main.ts',
             userscript: {
                 icon: 'https://vitejs.dev/logo.svg',
-                namespace: 'npm/vite-plugin-monkey',
+                namespace: 'sunstorm/neptun',
                 author: 'SunStorm',
                 description: 'Bypass the Neptun 2fa',
+                copyright: 'MIT License',
+                supportURL: 'https://github.com/MrExplode/no2fa',
+                updateURL:
+                    'https://github.com/MrExplode/no2fa/releases/latest/download/no2fa.user.js',
                 // list borrowed from NPU
                 include: [
                     'https://*neptun*/*hallgato*/*',
@@ -26,7 +30,7 @@ export default defineConfig({
                     'https://host.sdakft.hu/*',
                     'https://neptun.ejf.hu/ejfhw/*'
                 ],
-                grant: ['GM.getValue', 'GM.setValue']
+                grant: ['GM.getValue', 'GM.setValue', 'GM_deleteValue']
             }
         })
     ]
