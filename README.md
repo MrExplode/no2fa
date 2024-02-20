@@ -1,12 +1,41 @@
 # no2fa [![CI Build](https://github.com/MrExplode/no2fa/actions/workflows/check.yml/badge.svg)](https://github.com/MrExplode/no2fa/actions/workflows/check.yml)
 
-Bypass the Neptun 2fa.
+A simple userscript to bypass the Neptun 2fa.  
+This userscript is compatible with [npu](https://github.com/solymosi/npu).
 
 > Why would I want to do that?
 
 This tool is right for you if:
 - You are confident in your security measures without 2fa
 - Annoyed with the dumb implementation on Neptun (no session restore, no device remembering)
+
+## Install
+1. Install [**TamperMonkey**](https://www.tampermonkey.net/)
+
+## Usage
+2. Go to `My Data > Settings > Two-factor authentication`
+3. Click `Turn off`
+4. Click enable
+5. Click on the `Enable Bypass` button
+6. Enable the 2fa as usual (eg. with Microsoft Authenticator)
+
+## Development
+This project is built with [Vite](https://vitejs.dev/) using [pnpm](https://pnpm.io/).   
+
+---
+Install the dependencies:
+```bash
+pnpm install
+```
+Start development server:  
+(This will start the Vite dev server, and install a bridge userscript that allows hot reloading)
+```bash
+pnpm run dev
+```
+Building the production release:
+```bash
+pnpm run build
+```
 
 ## Licensing
 ```
