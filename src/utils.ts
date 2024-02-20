@@ -32,7 +32,7 @@ export function is2faPage(): boolean {
  *
  * @param parent the parent container to insert buttons
  */
-export function generateButtons(parent: JQuery<HTMLElement>) {
+export function addEnableButton(parent: JQuery<HTMLElement>) {
     const enabled = GM_getValue('totpSecret', null) != null
     parent.append(
         `<input id="no2faButton" type="button" class="button" value="${enabled ? 'Update Bypass' : 'Enable Bypass'}"/>`
@@ -42,7 +42,10 @@ export function generateButtons(parent: JQuery<HTMLElement>) {
         GM_setValue('totpSecret', $('#twoFactorSetup_Secret').text())
         alert(enabled ? 'Bypass updated!' : 'Bypass enabled!')
     })
-    // delete options
+}
+
+export function addDeleteButton(parent: JQuery<HTMLElement>) {
+    const enabled = GM_getValue('totpSecret', null) != null
     if (enabled) {
         parent.append(
             `<input id="no2faDelete" type="button" class="button" value="Disable Bypass"/>`

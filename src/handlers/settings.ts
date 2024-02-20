@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import { Handler } from './handler'
-import { generateButtons, is2faPage } from '../utils'
+import { addEnableButton, addDeleteButton, is2faPage } from '../utils'
 import { observe } from '../observer'
 
 export class SettingsHandler extends Handler {
@@ -13,6 +13,10 @@ export class SettingsHandler extends Handler {
 
     load(): void {
         this.unsubscribe = observe('#form1', this.onMutations)
+        const button = $(
+            'input[name="upFunction$c_options$UpdatePanel1$tab$ctl02$upTwoFactorAuthentication$ToggleTwoFactor"]'
+        )
+        addDeleteButton(button.parent())
     }
 
     unload(): void {
@@ -25,7 +29,7 @@ export class SettingsHandler extends Handler {
                 'input[name="upFunction$c_options$UpdatePanel1$tab$ctl02$ctl01$upmodalTwoFactorSetup$ctl02$twoFactorSetup$ctl00$Setup"]'
             )
             if (button.length == 0) return
-            generateButtons(button.parent())
+            addEnableButton(button.parent())
             this.injected = true
         }
     }
