@@ -15,7 +15,7 @@ export default defineConfig({
                 author: 'SunStorm',
                 description: 'Bypass the Neptun 2fa',
                 // list borrowed from NPU
-                match: [
+                include: [
                     'https://*neptun*/*hallgato*/*',
                     'https://*neptun*/*Hallgatoi*/*',
                     'https://*neptun*/*oktato*/*',
