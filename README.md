@@ -11,6 +11,10 @@ This tool is right for you if:
 
 ## Install
 1. Install [**TamperMonkey**](https://www.tampermonkey.net/)
+2. Download the script by clicking [here](https://github.com/MrExplode/no2fa/releases/latest/download/no2fa.user.js).
+3. Click install on the TamperMonkey page.
+
+By installing this script you accept the license.
 
 ## Usage
 2. Go to `My Data > Settings > Two-factor authentication`
