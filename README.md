@@ -1,4 +1,4 @@
-# no2fa
+# no2fa [![CI Build](https://github.com/MrExplode/no2fa/actions/workflows/check.yml/badge.svg)](https://github.com/MrExplode/no2fa/actions/workflows/check.yml)
 
 Bypass the Neptun 2fa.
 
