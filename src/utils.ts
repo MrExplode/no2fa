@@ -20,11 +20,12 @@ export function writeToken(token: string) {
 }
 
 /**
- * @returns true when the current page is the 2fa settings
+ * @returns true when the 2fa settings are available in the DOM.
+ * The active tab may NOT be the 2fa, but this does not prevent the injection of our stuff.
  */
 export function is2faPage(): boolean {
     const tab = $('#c_options_ctl02_tab')
-    return tab.length != 0 && tab.hasClass('ajax__tab_active')
+    return tab.length != 0
 }
 
 /**
