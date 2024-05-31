@@ -1,27 +1,57 @@
 # no2fa [![CI Build](https://github.com/MrExplode/no2fa/actions/workflows/check.yml/badge.svg)](https://github.com/MrExplode/no2fa/actions/workflows/check.yml)
 
-A simple userscript to bypass the Neptun 2fa.  
-This userscript is compatible with [npu](https://github.com/solymosi/npu).
+[English description](https://github.com/MrExplode/no2fa/blob/6039c3edd50082ae893ffc4e33097577c37f4021/README.md)
 
-> Why would I want to do that?
+Ez az userscript "kikerüli" a 2 faktoros hitelesítést a Neptunban.  
+Igen, működik a [Neptun PowerUp](https://github.com/solymosi/npu)-al.
 
-This tool is right for you if:
-- You are confident in your security measures without 2fa
-- Annoyed with the dumb implementation on Neptun (no session restore, no device remembering)
+**Mire való ez, miért jó?**  
+Egyre több intézményben kötelező a Neptunban kétfaktoros hitelesítést használni, ugyanakkor a Neptun által biztosított rendszer alsóhangon nem felhasználóbarát.  
+Unod már minden egyes alkalommal újra és újra beírni a kódot? Miért nem lehet megjegyeztetni az eszközt?  
+A **no2fa** script átveszi ezt a feladatot helyetted, minden bejelentkezésnél automatikusan átugorja a kétfaktoros hitelesítés ablakját.
 
-## Install
-1. Install [**TamperMonkey**](https://www.tampermonkey.net/)
-2. Download the script by clicking [here](https://github.com/MrExplode/no2fa/releases/latest/download/no2fa.user.js).
-3. Click install on the TamperMonkey page.
+> [!NOTE]  
+> Jelenleg egyszerre csak egy gépen lehet használni.
 
-By installing this script you accept the license.
+<details>
+<summary>Hogy működik?</summary>
+A script lementi a 2fa beállításakor a TOTP secret keyt, majd bejelentkezéskor kiszámolja az aktuális kódot, beírja a mezőbe és rákattint a bejelentkezés gombra.<br>
+Ezzel felhasználói élmény szempontjából "kikerültük" a 2fa-t.
+</details>
 
-## Usage
-2. Go to `My Data > Settings > Two-factor authentication`
-3. Click `Turn off`
-4. Click enable
-5. Click on the `Enable Bypass` button
-6. Enable the 2fa as usual (eg. with Microsoft Authenticator)
+## Telepítés
+1. Telepítsd a  [**TamperMonkey**](https://www.tampermonkey.net/)-t
+2. Telepítsd a scriptet [ide](https://github.com/MrExplode/no2fa/releases/latest/download/no2fa.user.js) kattintva
+3. Kattints a **Telepítés** (vagy **Install**) gombra a *TamperMonkey* oldalán (amire az előző lépés végrehajtásakor kerültél)
+
+A script telepítésével elfogadod a *License*-t.  
+> Lásd: [itt](#licensing), lényegében nem adok garanciát semmire és nem vállalok felelősséget semmiért.
+
+## Használat
+0. Telepítsd a scriptet ha nem tetted meg (remélem ez evidens!!)
+
+1. Navigálj ide: `Saját adatok > Beállítások > Kétfaktoros hitelesítés`
+
+2. Kattints a **Kikapcsolás** gombra (ha még nem kapcsoltad be, vagy már kikapcsoltad valamiért, akkor ugorj a következő pontra)  
+![](docs/1.png)
+
+3. Kattints a **Beállítás** gombra  
+![](docs/2.png)
+
+4. Kattints az **Enable Bypass** gombra.  
+<img src="docs/3.png"  width="550"/>
+
+5. Okézd le a felugró visszaigazolást.  
+![](docs/4.png)
+
+6. **NINCS VÉGE, NE ZÁRD BE AZ ABLAKOT!!**
+7. Követsd a *Kétfaktoros hitelesítés* ablakban látható utasításokat.
+8. Ha megcsináltál mindent (QR kód, kód beírása, jelszó), kattints a **Beállítás** gombra.
+9. Ellenőrzésképpen frissítsd újra az oldalt (és ha nem a *Kétfaktoros hitelesítés* az első elem a beállítások közt, navigálj rá)  
+A következőt kell látnod:  
+![](docs/5.png)
+
+10. A következő bejelentkezésnél már nem kell beírnod a kódot.
 
 ## Development
 This project is built with [Vite](https://vitejs.dev/) using [pnpm](https://pnpm.io/).   
