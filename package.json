@@ -11,17 +11,17 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.10",
-    "@types/jquery": "^3.5.30",
-    "eslint": "^9.3.0",
+    "@types/eslint": "^9.6.1",
+    "@types/jquery": "^3.5.31",
+    "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
-    "globals": "^15.3.0",
+    "globals": "^15.11.0",
     "jquery": "^3.7.1",
-    "prettier": "3.2.5",
+    "prettier": "3.3.3",
     "totp-generator": "^1.0.0",
-    "typescript": "^5.4.5",
-    "typescript-eslint": "^7.11.0",
-    "vite": "^5.2.12",
-    "vite-plugin-monkey": "^4.0.0"
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.10.0",
+    "vite": "^5.4.9",
+    "vite-plugin-monkey": "^4.0.6"
   }
 }
