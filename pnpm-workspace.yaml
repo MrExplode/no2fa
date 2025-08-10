@@ -1,0 +1,6 @@
+publicHoistPattern:
+  - "*eslint*"
+  - "*prettier*"
+
+onlyBuiltDependencies:
+  - esbuild

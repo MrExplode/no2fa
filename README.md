@@ -1,3 +1,9 @@
+> [!WARNING]
+> ## PROJECT ARCHIVED
+>  - The Neptun system gradually rolled out a UI rewrite last year, that breaks this userscript. Radical approach change would be necessary.
+>  - I've graduated, I no longer have interest in, nor access to Neptun for development.
+>  - Use a password manager (eg. [BitWarden](https://bitwarden.com/blog/basics-of-two-factor-authentication-with-bitwarden/)) capable of managing MFA tokens. 
+
 # no2fa [![CI Build](https://github.com/MrExplode/no2fa/actions/workflows/check.yml/badge.svg)](https://github.com/MrExplode/no2fa/actions/workflows/check.yml)
 
 [English description](https://github.com/MrExplode/no2fa/blob/6039c3edd50082ae893ffc4e33097577c37f4021/README.md)
